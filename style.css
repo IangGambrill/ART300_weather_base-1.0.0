@@ -21,43 +21,51 @@ body{
     background-color: blue;
     height: 200px;
     width: 100vw;
+    padding-left: 20px;
 }
 .c1{
-    margin-top: 1vw;
     grid-template-rows: 1fr;
     display: grid;
     background-color: #CAE0CC;
-    height: 10vw;
-    width: 10vw; 
+    height: 200px;
+    width: 230px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 95px;
+    font-family: titling-gothic-fb, sans-serif;
+    font-style: normal;
+    font-weight: 100;
 }
 .c2{
     margin-top: 2vw;
-    grid-template-rows: 1fr 2fr;
-    grid-row-gap: 4vw;
-    display: grid;
-    height: 8vw;
-    width: 16vw;
 }
 .cloud{
-    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
     display: grid;
     background-color: #CAE0CC;
-    height: 2vw;
+    height: 45px;
     width: 16vw;
+    text-align: center;
+}
+.cloud1{
+    padding-left: 10px;
 }
 .wind{
     grid-template-rows: 1fr 2fr;
     display: grid;
     background-color: #CAE0CC;
-    height: 2vw;
+    height: 35px;
     width: 16vw;
+    margin-top: 19px;
+    text-align: center;
 }
 .c3{
     margin-top:2vw ;
     grid-template-rows: 1fr 2fr;
     display: grid;
     background-color: #CAE0CC;
-    height: 8vw;
+    height: 150px;
     width: 16vw;
 }
 .c4{
@@ -95,6 +103,56 @@ body{
     grid-column-gap: 1vw;
     display: grid;
     background-color: blue;
-    height: 100px;
+    height: 50px;
     width: 100vw;
+}
+.forecast{
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100vw;
+    height:250px;
+    background-color: blue;
+    display: grid;
+    grid-column-gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.day1{
+    background-color: #CAE0CC;
+}
+.day2{
+    background-color: #CAE0CC;
+}
+.day3{
+    background-color: #CAE0CC;
+}
+.day4{
+    background-color: #CAE0CC;
+}
+.day5{
+    background-color: #CAE0CC;
+}
+.remainder{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    background-color: blue;
+    padding-left: 20px;
+    height: 170px;
+    width: 45vw;
+}
+.radar{
+    background-color: red;
+    height: 170px;
+}
+.misc{
+    margin-top: 20px;
+    background-color: #CAE0CC;
+    height: 150px;
+    width: 130px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
 }
