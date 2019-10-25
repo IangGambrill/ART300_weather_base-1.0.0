@@ -18,7 +18,7 @@ body{
     grid-template-columns: .5fr .5fr .5fr 1.5fr 1fr ;
     grid-column-gap: 1vw;
     display: grid;
-    background-color: blue;
+    background-color: ;
     height: 200px;
     width: 100vw;
     padding-left: 20px;
@@ -38,35 +38,52 @@ body{
     font-weight: 100;
 }
 .c2{
+    grid-template-rows: 1fr 1fr 1fr;
+    display: grid;
     margin-top: 2vw;
 }
 .cloud{
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    height: 45px;
+    background-color: #CAE0CC;
+}
+.cloud1{
+    margin-top: 5px;
+    padding-left: 10px;
+    height: 35px;
+}
+.wind{
+    grid-template-columns: 1fr 1fr;
     display: grid;
     background-color: #CAE0CC;
     height: 45px;
-    width: 16vw;
-    text-align: center;
 }
-.cloud1{
+.wind2{
+    margin-top: 5px;
     padding-left: 10px;
-}
-.wind{
-    grid-template-rows: 1fr 2fr;
-    display: grid;
-    background-color: #CAE0CC;
     height: 35px;
-    width: 16vw;
-    margin-top: 19px;
-    text-align: center;
+}
+.wind1{
+    margin-top: 15px;
+    padding-left: 10px;
 }
 .c3{
     margin-top:2vw ;
-    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
     display: grid;
     background-color: #CAE0CC;
     height: 150px;
     width: 16vw;
+}
+.rain{
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family: titling-gothic-fb, sans-serif;
+    font-style: normal;
+    font-weight: 50;
+    padding-left: 10px;
 }
 .c4{
     margin-top: 2vw;
@@ -82,6 +99,7 @@ body{
     background-color: #CAE0CC;
     height: 2vw;
     width: 6vw;
+    padding-left: 40px;
 }
 .date{
     grid-template-rows: 1fr 2fr;
@@ -89,6 +107,7 @@ body{
     background-color: #CAE0CC;
     height: 2vw;
     width: 6vw;
+    padding-left: 40px;
 }
 .c5{
     grid-template-rows: 1fr 2fr;
@@ -102,16 +121,23 @@ body{
     grid-template-columns: .5fr ;
     grid-column-gap: 1vw;
     display: grid;
-    background-color: blue;
+    background-color:  #CAE0CC;
     height: 50px;
     width: 100vw;
+}
+.alert{
+    align-items: center;
+    justify-content: center;
+    font-family: titling-gothic-fb, sans-serif;
+    font-style: normal;
+    font-weight: 100;
 }
 .forecast{
     margin-top: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 100vw;
-    height:250px;
-    background-color: blue;
+    height:300px;
+    background-color: ;
     display: grid;
     grid-column-gap: 20px;
     padding-left: 20px;
@@ -119,6 +145,35 @@ body{
 }
 .day1{
     background-color: #CAE0CC;
+}
+.clud{
+    height: 150px;
+    padding-left: 150px;
+}
+.bottomtxt{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+.cluddes{
+
+}
+.bottomtxt2{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+.wnd{
+
+}
+.wndim{
+    height: 40px;
+    padding-left: 10px;
+}
+.tem{
+
+}
+.temim{
+    height: 40px;
+    padding-left: 10px;
 }
 .day2{
     background-color: #CAE0CC;
@@ -136,7 +191,7 @@ body{
     display: grid;
     margin-top: 10px;
     grid-template-columns: 1fr 1fr;
-    background-color: blue;
+    background-color: ;
     padding-left: 20px;
     height: 170px;
     width: 45vw;
@@ -151,8 +206,20 @@ body{
     height: 150px;
     width: 130px;
 }
+.humid{
+
+}
+.dew{
+
+}
+.air{
+
+}
 img{
     max-width: 100%;
     max-height: 100%;
     width: auto;
+}
+body{
+    background-color: rgb(59, 59, 59)
 }
