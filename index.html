@@ -29,12 +29,13 @@
 
 
 
-
+        <input placeholder="Enter Your ZIP Code"  name="name" id="zip" />
+        <p id="zip_display"></p>
 
 
         <div class="results" id="app">
             <div class="curent">
-                <div class="c1"><p>-150°</p></div>
+                <div class="c1"> <p class="degree_symbol">{{current.temp.current}}</p></div>
                 <div class="c2">
                     <div class="cloud">
                         <div class="cloud1">
@@ -42,7 +43,7 @@
                         </div>
 
                         <div>
-                            <p>partly cloudy</p>
+                            <p>{{current.cloud_cover}}</p>
                         </div>
                     </div>
                     <div class="empty">
@@ -52,7 +53,7 @@
                         <div class="wind2"><img src="images/cloud.jpg" alt="placeholder">
                         </div>
                         <div class="mile">
-                            <p>150 Mph</p>
+                            <p>{{current.wind.speed}}</p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +61,7 @@
                     <div class="wind1"><img src="images/cloud.jpg" alt="placeholder">
                     </div>
                     <div class="rain">
-                        <p>light cloud in the area</p>
+                        <p>{{current.description_main}}</p>
                     </div>
                     <div class="">
 
@@ -68,19 +69,18 @@
                 </div>
                 <div class="c4">
                     <div class="time">
-                        <p>12:00 am</p>
+                        <p>{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
                     </div>
                     <div class="date">
-                        <p>oct 26</p>
+                        <p>{{time.date}}</p>
                     </div>
                 </div>
                 <div class="c5">
                     <div class="bar">
-                            <input placeholder="Enter Your ZIP Code" name="name" id="zip" />
-                            <p id="zip_display"></p>
+                            
                     </div>
                     <div class="location">
-                        <p>you are where are</p>
+                        <p>{{location.state}}</p>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                             <img src="images/cloud.jpg" alt="placeholder">
                         </div>
                         <div class="wnd">
-                            <p>4000 mph</p>
+                            <p>{{forecast[0].wind_spd}} mph</p>
                         </div>
                     </div>
                     <div class="bottomtxt2">
@@ -110,7 +110,7 @@
                             <img src="images/cloud.jpg" alt="placeholder">
                         </div>
                         <div class="tem">
-                            <p>2° </p>
+                            <p  class="degree_symbol">High - {{forecast[0].max_temp}}</p>
                         </div>
                     </div>
                     
@@ -127,7 +127,7 @@
                                 <img src="images/cloud.jpg" alt="placeholder">
                             </div>
                             <div class="wnd">
-                                <p>4000 mph</p>
+                                <p>{{forecast[1].wind_spd}} mph</p>
                             </div>
                         </div>
                         <div class="bottomtxt2">
@@ -135,7 +135,7 @@
                                 <img src="images/cloud.jpg" alt="placeholder">
                             </div>
                             <div class="tem">
-                                <p>2° </p>
+                                <p  class="degree_symbol">High - {{forecast[1].max_temp}}</p>
                             </div>
                         </div>
                 </div>
@@ -151,7 +151,7 @@
                                     <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="wnd">
-                                    <p>4000 mph</p>
+                                    <p>{{forecast[2].wind_spd}} mph</p>
                                 </div>
                             </div>
                             <div class="bottomtxt2">
@@ -159,7 +159,7 @@
                                     <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="tem">
-                                    <p>2° </p>
+                                    <p  class="degree_symbol">High - {{forecast[2].max_temp}}</p>
                                 </div>
                             </div>
                 </div>
@@ -175,7 +175,7 @@
                                     <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="wnd">
-                                    <p>4000 mph</p>
+                                    <p>{{forecast[3].wind_spd}} mph</p>
                                 </div>
                             </div>
                             <div class="bottomtxt2">
@@ -183,7 +183,7 @@
                                     <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="tem">
-                                    <p>2° </p>
+                                    <p  class="degree_symbol">High - {{forecast[3].max_temp}}</p>
                                 </div>
                             </div>
                 </div>
@@ -199,7 +199,7 @@
                                     <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="wnd">
-                                    <p>4000 mph</p>
+                                    <p>{{forecast[4].wind_spd}} mph</p>
                                 </div>
                             </div>
                             <div class="bottomtxt2">
@@ -207,24 +207,24 @@
                                     <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="tem">
-                                    <p>2° </p>
+                                    <p  class="degree_symbol">High - {{forecast[4].max_temp}}</p>
                                 </div>
                             </div>
                 </div>
             </div>
             <div class="remainder">
                 <div class="radar">
-
+                    <div id="map"></div>
                 </div>
                 <div class="misc">
                     <div class="humid">
-                            <p>humidity: 0%</p>
+                        <p>{{current.humidity}}</p>
                     </div>
                     <div class="dew">
-                      <p>dew point: N/A</p>
+                        <p>{{current.pressure}}</p>
                     </div>
                     <div class="air">
-                        <p>air quality: satans butthole</p>
+                        
                     </div>
                 </div>
             </div>
