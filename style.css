@@ -141,7 +141,7 @@ body{
     margin-top: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 95vw;
-    height:300px;
+    height:250px;
     background-color: ;
     display: grid;
     grid-column-gap: 20px;
