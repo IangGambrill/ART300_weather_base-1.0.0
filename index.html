@@ -35,7 +35,7 @@
                 <div class="c2">
                     <div class="cloud">
                         <div class="cloud1">
-                            <img src="images/cloud.jpg" alt="placeholder">
+                            <img src="/images/03d.png" alt="">
                         </div>
 
                         <div>
@@ -56,6 +56,7 @@
                 </div>
                 <div class="c3">
                     <div class="wind1">
+                            <img v-bind:src="'/images/' + forecast[0].description_icon + '.png'" v-bind:alt="forecast[0].weather.description">
                     </div>
                     <div class="rain">
                         <p>{{current.description_main}}</p>
@@ -209,10 +210,10 @@
                         <p>humidity {{current.humidity}}</p>
                     </div>
                     <div class="dew">
-                        <p class="air_quality">{{current.air_quality}}</p>
+                        <p>dew point {{forecast[0].dewpt}}</p>
                     </div>
                     <div class="air">
-                        
+                        <p class="air_quality">air quality {{current.air_quality}}</p>
                     </div>
                 </div>
             </div>=
