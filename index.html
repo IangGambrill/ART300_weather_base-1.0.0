@@ -26,10 +26,6 @@
     </head>
 
     <body>
-
-
-
-        <input placeholder="Enter Your ZIP Code"  name="name" id="zip" />
         <p id="zip_display"></p>
 
 
@@ -50,15 +46,16 @@
 
                         </div>
                     <div class="wind">
-                        <div class="wind2"><img src="images/cloud.jpg" alt="placeholder">
-                        </div>
-                        <div class="mile">
-                            <p>{{current.wind.speed}}</p>
-                        </div>
+                    <div class="wind2">
+                            <img src="/images/icon wind.png" alt="">
+                    </div>
+                    <div class="mile">
+                        <p>{{current.wind.speed}}</p>
+                    </div>
                     </div>
                 </div>
                 <div class="c3">
-                    <div class="wind1"><img src="images/cloud.jpg" alt="placeholder">
+                    <div class="wind1">
                     </div>
                     <div class="rain">
                         <p>{{current.description_main}}</p>
@@ -77,137 +74,128 @@
                 </div>
                 <div class="c5">
                     <div class="bar">
-                            
+                        <input placeholder="Enter Your ZIP Code" v-on:input="zip_trigger" name="name" id="zip" />
                     </div>
                     <div class="location">
                         <p>{{location.state}}</p>
                     </div>
                 </div>
-            </div>
+                </div>
             <div class="alerts">
                 <div class="alert">
-                    <p>aler u suc</p>
+                    <p>{{error}}</p>
                 </div>
             </div>
             <div class="forecast">
                 <div class="day1">
                     <div class="clud">
-                        <img src="images/cloud.jpg" alt="placeholder">
+                            <img v-bind:src="'/images/' + forecast[0].description_icon + '.png'" v-bind:alt="forecast[0].weather.description">
                     </div>
                     <div class="cluddes">
                         
                     </div>
-                    <div class="bottomtxt">
-                        <div class="wndim">
-                            <img src="images/cloud.jpg" alt="placeholder">
-                        </div>
-                        <div class="wnd">
-                            <p>{{forecast[0].wind_spd}} mph</p>
-                        </div>
-                    </div>
                     <div class="bottomtxt2">
                         <div class="temim">
-                            <img src="images/cloud.jpg" alt="placeholder">
                         </div>
                         <div class="tem">
                             <p  class="degree_symbol">High - {{forecast[0].max_temp}}</p>
                         </div>
                     </div>
+                    <div class="bottomtxt">
+                        <div class="wndim">
+                        </div>
+                        <div class="wnd">
+                            <p>{{forecast[0].wind_spd}} mph</p>
+                        </div>
+                    </div>
+                    
                     
                 </div>
                 <div class="day2">
                     <div class="clud">
-                            <img src="images/cloud.jpg" alt="placeholder">
+                            <img v-bind:src="'/images/' + forecast[1].description_icon + '.png'" v-bind:alt="forecast[1].weather.description">
                         </div>
                         <div class="cluddes">
                             
                         </div>
-                        <div class="bottomtxt">
-                            <div class="wndim">
-                                <img src="images/cloud.jpg" alt="placeholder">
-                            </div>
-                            <div class="wnd">
-                                <p>{{forecast[1].wind_spd}} mph</p>
-                            </div>
-                        </div>
                         <div class="bottomtxt2">
                             <div class="temim">
-                                <img src="images/cloud.jpg" alt="placeholder">
                             </div>
                             <div class="tem">
                                 <p  class="degree_symbol">High - {{forecast[1].max_temp}}</p>
                             </div>
                         </div>
+                        <div class="bottomtxt">
+                            <div class="wndim">
+                            </div>
+                            <div class="wnd">
+                                <p>{{forecast[1].wind_spd}} mph</p>
+                            </div>
+                        </div>
                 </div>
                 <div class="day3">
                         <div class="clud">
-                                <img src="images/cloud.jpg" alt="placeholder">
+                                <img v-bind:src="'/images/' + forecast[2].description_icon + '.png'" v-bind:alt="forecast[2].weather.description">
                             </div>
                             <div class="cluddes">
                                 
                             </div>
-                            <div class="bottomtxt">
-                                <div class="wndim">
-                                    <img src="images/cloud.jpg" alt="placeholder">
-                                </div>
-                                <div class="wnd">
-                                    <p>{{forecast[2].wind_spd}} mph</p>
-                                </div>
-                            </div>
                             <div class="bottomtxt2">
                                 <div class="temim">
-                                    <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="tem">
                                     <p  class="degree_symbol">High - {{forecast[2].max_temp}}</p>
                                 </div>
                             </div>
+                            <div class="bottomtxt">
+                                <div class="wndim">
+                                </div>
+                                <div class="wnd">
+                                    <p>{{forecast[2].wind_spd}} mph</p>
+                                </div>
+                            </div>
                 </div>
-                <div class="day5">
+                <div class="day4">
                         <div class="clud">
-                                <img src="images/cloud.jpg" alt="placeholder">
+                                <img v-bind:src="'/images/' + forecast[3].description_icon + '.png'" v-bind:alt="forecast[3].weather.description">
                             </div>
                             <div class="cluddes">
                                 
                             </div>
-                            <div class="bottomtxt">
-                                <div class="wndim">
-                                    <img src="images/cloud.jpg" alt="placeholder">
-                                </div>
-                                <div class="wnd">
-                                    <p>{{forecast[3].wind_spd}} mph</p>
-                                </div>
-                            </div>
                             <div class="bottomtxt2">
                                 <div class="temim">
-                                    <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="tem">
                                     <p  class="degree_symbol">High - {{forecast[3].max_temp}}</p>
                                 </div>
                             </div>
+                            <div class="bottomtxt">
+                                <div class="wndim">
+                                </div>
+                                <div class="wnd">
+                                    <p>{{forecast[3].wind_spd}} mph</p>
+                                </div>
+                            </div>
                 </div>
                 <div class="day5">
                         <div class="clud">
-                                <img src="images/cloud.jpg" alt="placeholder">
+                                <img v-bind:src="'/images/' + forecast[4].description_icon + '.png'" v-bind:alt="forecast[4].weather.description">
                             </div>
                             <div class="cluddes">
                                 
                             </div>
+                            <div class="bottomtxt2">
+                                <div class="temim">
+                                </div>
+                                <div class="tem">
+                                        <p  class="degree_symbol">High - {{forecast[4].max_temp}}</p>
+                                </div>
+                            </div>
                             <div class="bottomtxt">
                                 <div class="wndim">
-                                    <img src="images/cloud.jpg" alt="placeholder">
                                 </div>
                                 <div class="wnd">
                                     <p>{{forecast[4].wind_spd}} mph</p>
-                                </div>
-                            </div>
-                            <div class="bottomtxt2">
-                                <div class="temim">
-                                    <img src="images/cloud.jpg" alt="placeholder">
-                                </div>
-                                <div class="tem">
-                                    <p  class="degree_symbol">High - {{forecast[4].max_temp}}</p>
                                 </div>
                             </div>
                 </div>
@@ -218,16 +206,17 @@
                 </div>
                 <div class="misc">
                     <div class="humid">
-                        <p>{{current.humidity}}</p>
+                        <p>humidity {{current.humidity}}</p>
                     </div>
                     <div class="dew">
-                        <p>{{current.pressure}}</p>
+                        <p class="air_quality">{{current.air_quality}}</p>
                     </div>
                     <div class="air">
                         
                     </div>
                 </div>
-            </div>
+            </div>=
+        </div>
            <!--  <h1>TIME</h1>
             <p>{{time.day}}</p>
             <p>{{time.date}}</p>

@@ -120,17 +120,12 @@ body{
     grid-template-rows: 1fr 2fr;
     display: grid;
     background-color: #CAE0CC;
-    height: 7vw;
-    width: 7vw;
+    height: 4vw;
+    width: 200px;
 }
 .alerts{
     margin-top: 10px;
-    grid-template-columns: .5fr ;
-    grid-column-gap: 1vw;
-    display: grid;
     background-color:  #CAE0CC;
-    height: 50px;
-    width: 100vw;
 }
 .alert{
     align-items: center;
@@ -172,14 +167,14 @@ body{
     display: grid;
 }
 .wnd{
-
+    font-weight: bold;
 }
 .wndim{
     height: 40px;
     padding-left: 10px;
 }
 .tem{
-
+    font-weight: bold;
 }
 .temim{
     height: 40px;
